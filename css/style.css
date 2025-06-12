@@ -68,11 +68,17 @@ body {
     gap: 1.5rem;
 }
 
+/* --- MODIFIED SECTION START --- */
+
 .gallery-item {
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* ADDED: Force the container to be a square and hide image overflow */
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
 }
 
 .gallery-item:hover {
@@ -82,9 +88,16 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
     display: block;
+
+    /* CHANGED: Make image fill the container and crop to fit */
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensures the image is centered */
 }
+
+/* --- MODIFIED SECTION END --- */
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
