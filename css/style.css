@@ -83,7 +83,7 @@ body {
 
 .gallery-item img {
     display: block;
-    max-width: 100%;  /* scale down if too big for screen */
+    max-width: 60%;  /* scale down if too big for screen */
     height: auto;     /* keep original aspect ratio */
 }
 
@@ -97,5 +97,6 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
+
 
 
