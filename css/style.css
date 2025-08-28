@@ -63,10 +63,10 @@ body {
 }
 
 .photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 1rem;
+    justify-content: center;  /* center rows */
 }
 
 .gallery-item {
@@ -97,6 +97,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
+
 
 
 
