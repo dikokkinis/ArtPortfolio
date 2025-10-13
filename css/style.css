@@ -101,7 +101,7 @@ body {
 
 .gallery-item img {
     display: inline-block;
-    width: 100%;
+    width: auto;
     height: auto;
     transition: transform 2s ease, opacity 0.5s ease; 
 }
@@ -125,7 +125,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #423333;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
     opacity: 0;
@@ -222,6 +222,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
