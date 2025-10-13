@@ -63,27 +63,56 @@ body {
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
     justify-items: center; 
 }
 
 .gallery-item {
-    background: none;  
-    border: none;       
-    box-shadow: none;   
-    padding: 0;         
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
 }
 
 .gallery-item img {
     display: block;
-    max-width: 100%; 
-    height: auto;     
+    width: 100%;
+    height: auto;
+    transition: transform 2s ease, opacity 0.5s ease; /* smooth slow zoom + fade */
+}
+
+/* Zoom and fade image on hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Overlay text */
+.gallery-item::after {
+    content: attr(data-title); /* dynamic text from HTML */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Show text on hover */
+.gallery-item:hover::after {
+    opacity: 1;
 }
 
 /* Responsive adjustments */
@@ -145,6 +174,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
