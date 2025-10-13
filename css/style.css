@@ -9,16 +9,38 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Geist Sans', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
+    color: #423333;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Social icons */
+.social-icons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1001;
+}
+
+.social-icons .icon {
+    font-size: 1.8rem;
+    color: #1c1a1a;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2);
+    color: #524949;
 }
 
 /* Header and Navigation */
@@ -40,14 +62,14 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #333;
+    color: #423333;
     font-weight: 700;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #777;
+    color: #524949;
 }
 
 /* Gallery Section */
@@ -115,6 +137,31 @@ body {
     opacity: 1;
 }
 
+/* About section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.about-section p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery-title {
@@ -174,6 +221,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
