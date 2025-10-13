@@ -100,16 +100,16 @@ body {
 }
 
 .gallery-item img {
-    display: block;
+    display: inline-block;
     width: 100%;
     height: auto;
-    transition: transform 2s ease, opacity 0.5s ease; /* smooth slow zoom + fade */
+    transition: transform 2s ease, opacity 0.5s ease; 
 }
 
 /* Zoom and fade image on hover */
 .gallery-item:hover img {
     transform: scale(1.1);
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .gallery-item:hover {
@@ -119,12 +119,12 @@ body {
 
 /* Overlay text */
 .gallery-item::after {
-    content: attr(data-title); /* dynamic text from HTML */
+    content: attr(data-title); 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #423333;
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
@@ -133,7 +133,7 @@ body {
     pointer-events: none;
 }
 
-/* Show text on hover */
+
 .gallery-item:hover::after {
     opacity: 1;
 }
@@ -222,6 +222,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
