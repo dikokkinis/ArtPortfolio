@@ -101,7 +101,7 @@ body {
 
 .gallery-item img {
     display: inline-block;
-    width: auto;
+    width: 200%;
     height: auto;
     transition: transform 2s ease, opacity 0.5s ease; 
 }
@@ -222,6 +222,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
