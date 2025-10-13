@@ -47,7 +47,7 @@ body {
 .site-header {
     background-color: #fff;
     padding: 1rem 0;
-    text-align: center;
+    text-align: right;
     border-bottom: 1px solid #ddd;
 }
 
@@ -221,6 +221,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
