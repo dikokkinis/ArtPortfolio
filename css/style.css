@@ -163,6 +163,22 @@ body {
     color: #444;
 }
 
+/* Music section */
+.music-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+
+.music-section p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -223,6 +239,7 @@ body {
 .lightbox .close:hover {
     color: #ccc;
 }
+
 
 
 
